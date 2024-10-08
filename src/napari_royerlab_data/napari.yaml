@@ -2,14 +2,12 @@ name: napari-royerlab-data
 display_name: RoyerLab Data
 # use 'hidden' to remove plugin from napari hub search results
 visibility: public
-# see https://napari.org/stable/plugins/manifest.html for valid categories
-categories: ["Annotation", "Segmentation", "Acquisition"]
+categories: ["Dataset"]
 contributions:
   commands:
-    - id: napari-royerlab-data.make_sample_data
-      python_name: napari_royerlab_data._sample_data:make_sample_data
-      title: Load sample data from RoyerLab Data
-  sample_data:
-    - command: napari-royerlab-data.make_sample_data
-      display_name: RoyerLab Data
-      key: unique_id.1
+    - id: napari-royerlab-data.data_loader
+      python_name: napari_royerlab_data:DataLoaderWidget
+      title: RoyerLab's data loader
+  widgets:
+    - command: napari-royerlab-data.data_loader
+      display_name: RoyerLab's data loader

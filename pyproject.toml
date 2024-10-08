@@ -25,7 +25,11 @@ classifiers = [
 ]
 requires-python = ">=3.9"
 dependencies = [
-    "numpy",
+    "qtpy",
+    "pandas",
+    "fsspec",
+    "napari-ome-zarr",
+    "tifffile",
 ]
 
 [project.optional-dependencies]
