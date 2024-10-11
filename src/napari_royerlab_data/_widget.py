@@ -53,6 +53,7 @@ class DataLoaderWidget(Container):
 
     @staticmethod
     def _parse_url(path: str) -> Tuple[str, str]:
+        print(path)
         if path.endswith("/"):
             path = path[:-1]
         basename = urllib.parse.urlparse(path).path.split("/")[-1]
